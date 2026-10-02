@@ -1,6 +1,6 @@
 # Desktop GUI
 
-Vykar includes a desktop GUI for managing repositories, running backups, and browsing/restoring snapshots. It is built with [Slint](https://slint.dev/) and [tray-icon](https://github.com/nickelpack/tray-icon).
+Vykar includes a desktop GUI for managing repositories, running backups, and browsing/restoring snapshots. It is built with [Slint](https://slint.dev/) and [tray-icon](https://github.com/tauri-apps/tray-icon).
 
 [![Vykar GUI](images/gui-screenshot.png)](images/gui-screenshot.png)
 
@@ -29,17 +29,17 @@ sudo apt install libfuse2t64
 APPIMAGE_EXTRACT_AND_RUN=1 ./vykar-gui-*-x86_64.AppImage
 ```
 
-Alternatively, the Intel glibc release archive includes a bare `vykar-gui` binary. This requires system libraries like `libxdo` to be installed separately:
+Alternatively, the Intel glibc release archive includes a bare `vykar-gui` binary. It needs GTK 3 and an AppIndicator library at runtime, which most desktop distributions already ship:
 
 ```bash
 # Debian/Ubuntu
-sudo apt install libxdo3
+sudo apt install libgtk-3-0 libayatana-appindicator3-1
 ```
 
 To build from source, install the development headers:
 
 ```bash
-sudo apt install libxdo-dev libgtk-3-dev libxkbcommon-dev libayatana-appindicator3-dev
+sudo apt install libgtk-3-dev libxkbcommon-dev libayatana-appindicator3-dev
 cargo build --release -p vykar-gui
 ```
 

@@ -78,8 +78,7 @@ pub(crate) fn build_tray_icon(
     let tray = TrayIconBuilder::new()
         .with_menu(Box::new(menu))
         .with_tooltip(APP_TITLE)
-        .with_icon(icon)
-        .with_icon_as_template(true)
+        .with_icon_templated(icon)
         .build()
         .map_err(|e| format!("tray icon build failed: {e}"))?;
 

@@ -22,7 +22,7 @@ vykar-types.workspace = true
 tokio = { workspace = true, features = ["sync"] }
 opener = "0.8"
 slint = { version = "~1.17", default-features = false, features = ["std", "compat-1-2", "backend-winit", "renderer-skia", "accessibility"] }
-tray-icon = "0.24.1"
+tray-icon = "0.26"
 crossbeam-channel.workspace = true
 tinyfiledialogs = "3"
 chrono.workspace = true
